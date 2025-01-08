@@ -1,0 +1,118 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    margin: 0;
+}
+.navbar{
+    display: flex;
+    /* position: sticky; */
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+}
+.navlogo img {
+    height: 8vh;
+}
+.navbar .navlogo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
+.navbar .search-bar input{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}
+.nav-links {
+    padding: 0 0 0 10px;
+    display: flex;
+    list-style: none;
+}
+.nav-links ul{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.nav-links li {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.nav-links a{
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.navlogo img:hover { 
+    background-color: #575757;
+
+}
+.nav-links a:hover {
+    background-color: #575757;
+}
+@media screen and (max-width: 768px)  {
+    /* .navbar{
+        padding: 6px 12px;     
+    } */
+    navbar .logo a {
+        font-size: 1rem; 
+    }
+
+    .navbar .search-bar input {
+        width: 180px;
+        padding: 4px 8px;
+    }
+
+    /* .nav-links li {
+        margin-left: 15px; 
+    } */
+
+    .nav-links a {
+        padding: 4px 8px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* .navbar {
+        padding: 4px 10px; 
+    } */
+
+    .navbar .logo a {
+        font-size: 1rem; 
+    }
+
+    .navbar .search-bar input {
+        width: 100px; 
+        padding: 3px 3px; 
+    }
+/* 
+    .nav-links li {
+        margin-left: 10px; 
+    } */
+    .nav-links ul{
+        padding: 0 0 0 3px;
+    }
+
+    /* .nav-links a {
+        padding: 3px 3px; 
+    } */
+}
+.arrow{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    z-index: 999;
+    /* transition: 0 5px 0.5s ease-in-out; */
+}

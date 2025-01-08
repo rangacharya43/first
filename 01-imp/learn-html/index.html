@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="navlogo">
+            <a href="index.html"><img src="/images/email-icon-html-76.png" alt="logo"></a>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search hear">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Basic HTML</a></li>
+            <li><a href="intermediate.html">Intermediate HTML</a></li>
+            <li><a href="advanced.htm">Advanced HTML</a></li>
+        </ul>          
+    </div>
+    
+    <a href="index.html"><div class="arrow"><h1>up</h1></div></a>
+
+    
+    <div id="intro">
+
+      <div class="container">
+    
+        <section class="section">
+          <h1>Structure and Syntax of HTML</h1>
+          <p>HTML (HyperText Markup Language) is the standard language used to create web pages. It provides the basic structure and content of the page using a system of "tags." These tags define elements like headings, paragraphs, links, images, and more. This section explains how HTML is structured and the syntax of HTML documents.</p>
+        </section>
+      
+        
+        <section class="section">
+          <h2>HTML Document Structure</h2>
+          <p>An HTML document has a specific structure that defines how web pages should be formatted and displayed in a browser. The basic structure of an HTML document includes several key elements:</p>
+      
+          <h3>1. Declaration</h3>
+          <p>This tag is used to define the document type and version of HTML being used. It is placed at the very beginning of the HTML document. For HTML5, the declaration is:</p>
+          <div class="code-block">
+&lt;!DOCTYPE html&gt;
+          </div>
+          <p>This tells the browser that the page is written using HTML5, ensuring the page is displayed correctly.</p>
+      
+          <h3>2. <code>&lt;html&gt;</code> Tag</h3>
+          <p>The <code>&lt;html&gt;</code> tag wraps the entire content of the document. It tells the browser that everything inside this tag is HTML content.</p>
+          <div class="code-block">
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;!-- HTML content goes here --&gt;<br>
+&lt;/html&gt;
+          </div>
+      
+          <h3>3. <code>&lt;head&gt;</code> Tag</h3>
+          <p>The <code>&lt;head&gt;</code> section contains metadata and other important information about the web page. This section is not visible to the user but provides necessary details like the title, links to external files (CSS, JavaScript), and meta tags for SEO (Search Engine Optimization).</p>
+          <div class="code-block">
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;My First Web Page&lt;/title&gt;<br>
+&lt;/head&gt;
+          </div>
+      
+          <h3>4. <code>&lt;body&gt;</code> Tag</h3>
+          <p>The <code>&lt;body&gt;</code> section contains all the visible content of the webpage. This is what users see when they visit the page, such as text, images, videos, and links.</p>
+          <div class="code-block">
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;h1&gt;Welcome to My Web Page&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;This is a paragraph of text.&lt;/p&gt;<br>
+&lt;/body&gt;
+          </div>
+      
+          <h3>Putting Everything Together</h3>
+          <div class="code-block">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My First Web Page&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to My Web Page&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph of text.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+          </div>
+        </section>
+      
+        
+        <section class="section">
+          <h2>Elements and Tags</h2>
+          <p>In HTML, content is defined using tags, which are special keywords enclosed in angle brackets (&lt;&gt;). Tags come in pairs: an opening tag (&lt;h1&gt;) and a closing tag (&lt;/h1&gt;). The opening tag defines the start of an element, and the closing tag defines the end.</p>
+      
+          <h3>Text Elements</h3>
+          <div class="example-grid">
+            <div class="example">
+              <h4>&lt;h1&gt; to &lt;h6&gt;: Headings</h4>
+              <p>These tags are used to define headings. <code>&lt;h1&gt;</code> is the highest (most important) level, while <code>&lt;h6&gt;</code> is the lowest level.</p>
+              <div class="code-block">
+&lt;h1&gt;This is a main heading&lt;/h1&gt;<br>
+&lt;h2&gt;This is a subheading&lt;/h2&gt;
+              </div>
+            </div>
+      
+            <div class="example">
+              <h4>&lt;p&gt;: Paragraphs</h4>
+              <p>Defines a paragraph of text.</p>
+              <div class="code-block">
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+              </div>
+            </div>
+          </div>
+      
+          <div class="example-grid">
+            <div class="example">
+              <h4>&lt;strong&gt;: Bold Text</h4>
+              <p>Makes text bold and indicates importance.</p>
+              <div class="code-block">
+&lt;strong&gt;This text is important and bold.&lt;/strong&gt;
+              </div>
+            </div>
+      
+            <div class="example">
+              <h4>&lt;a&gt;: Links</h4>
+              <p>Used to create hyperlinks to other pages or websites.</p>
+              <div class="code-block">
+&lt;a href="https://www.example.com"&gt;Click here to visit Example&lt;/a&gt;
+              </div>
+            </div>
+          </div>
+      
+          <div class="example-grid">
+            <div class="example">
+              <h4>&lt;img&gt;: Images</h4>
+              <p>Used to display images on a webpage.</p>
+              <div class="code-block">
+&lt;img src="image.jpg" alt="A description of the image"&gt;
+              </div>
+            </div>
+      
+            <div class="example">
+              <h4>&lt;ul&gt; and &lt;ol&gt;: Lists</h4>
+              <p>&lt;ul&gt; defines an unordered list (bulleted list) and &lt;ol&gt; defines an ordered list (numbered list). <code>&lt;li&gt;</code> defines a list item.</p>
+              <div class="code-block">
+&lt;ul&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt;<br>
+&lt;/ul&gt;
+              </div>
+            </div>
+          </div>
+        </section>
+      
+        
+        <section class="section">
+          <h2>Additional HTML Concepts</h2>
+          <p>HTML is not just about adding basic elements. You can also customize the layout and behavior of your content using various attributes and elements:</p>
+      
+          <h3>1. Attributes</h3>
+          <p>Attributes provide additional information about an element. Common attributes include:</p>
+          <ul>
+            <li><strong>href:</strong> Defines the URL for links.</li>
+            <li><strong>src:</strong> Defines the source for images or videos.</li>
+            <li><strong>alt:</strong> Provides alternative text for images (useful for accessibility).</li>
+            <li><strong>id:</strong> Uniquely identifies an element.</li>
+            <li><strong>class:</strong> Allows you to group elements and style them with CSS.</li>
+          </ul>
+      
+          <h3>2. Forms</h3>
+          <p>Forms are used to collect user input. You can create forms with <code>&lt;form&gt;</code> and use various input fields such as textboxes, buttons, and radio buttons.</p>
+          <div class="code-block">
+&lt;form action="/submit" method="POST"&gt;<br>
+&nbsp;&nbsp;&lt;label for="username"&gt;Username:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="text" id="username" name="username"&gt;<br>
+&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+&lt;/form&gt;
+          </div>
+      
+          <h3>3. Nesting Elements</h3>
+          <p>HTML allows nesting elements inside each other. This is useful for organizing content. For example:</p>
+          <div class="code-block">
+&lt;div&gt;<br>
+&nbsp;&nbsp;&lt;h1&gt;Website Title&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;A description of the website&lt;/p&gt;<br>
+&lt;/div&gt;
+          </div>
+        </section>
+      </div>
+       
+    </div>
+    <footer>
+      <p>Created with ❤️ by <a href="https://www.example.com">Your Name</a>. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>

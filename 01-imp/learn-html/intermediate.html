@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navlogo">
+            <a href="index.html"><img src="/images/email-icon-html-76.png" alt="logo"></a>  
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search hear">
+        </div>
+      
+        <ul class="nav-links">
+            <li><a href="index.html">Basic HTML</a></li>
+            <li><a href="intermediate.html">Intermediate HTML</a></li>
+            <li><a href="advanced.htm">Advenced HTML</a></li>     
+        </ul>
+    </div>
+
+    <a href="intermediate.html"><div class="arrow"><h1>up</h1></div></a>
+
+    <div id="intro">
+
+        <div class="container">
+            
+            <section class="section">
+              <h1>Intermediate HTML Concepts</h1>
+              <p>At the intermediate level, we dive deeper into HTML and explore more advanced features that are essential for building complex, functional web pages. This section covers key topics such as tables, multimedia, semantic elements, forms, and meta tags, and explains their purpose and usage.</p>
+            </section>
+            
+            
+            <section class="section">
+              <h2>2.1 HTML Tables</h2>
+              <p>Tables are used to display data in a grid format, where information is organized into rows and columns. HTML provides several tags for creating and styling tables. Let's go over each of these in detail:</p>
+              
+              <h3>Table Structure Tags</h3>
+              <p><code>&lt;table&gt;</code>: This tag defines the start of the table. Everything inside this tag is part of the table.</p>
+              <div class="code-block">
+&lt;table&gt;<br>
+&nbsp;&nbsp;&lt;!-- Table content goes here --&gt;<br>
+&lt;/table&gt;
+              </div>
+              
+              <p><code>&lt;tr&gt;</code> (Table Row): The <code>&lt;tr&gt;</code> tag defines a row in the table.</p>
+              <div class="code-block">
+&lt;table&gt;<br>
+&nbsp;&nbsp;&lt;tr&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Table cells go here --&gt;<br>
+&nbsp;&nbsp;&lt;/tr&gt;<br>
+&lt;/table&gt;
+              </div>
+          
+              <p><code>&lt;th&gt;</code> (Table Header Cell): The <code>&lt;th&gt;</code> tag defines a header cell. These cells are bold and centered by default.</p>
+              <div class="code-block">
+&lt;tr&gt;<br>
+&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+&lt;/tr&gt;
+              </div>
+              
+              <p><code>&lt;td&gt;</code> (Table Data Cell): The <code>&lt;td&gt;</code> tag defines a regular cell in the table, containing data.</p>
+              <div class="code-block">
+&lt;tr&gt;<br>
+&nbsp;&nbsp;&lt;td&gt;Data 1&lt;/td&gt;<br>
+&nbsp;&nbsp;&lt;td&gt;Data 2&lt;/td&gt;<br>
+&lt;/tr&gt;
+              </div>
+              
+              <p><code>&lt;caption&gt;</code>: The <code>&lt;caption&gt;</code> tag is used to add a title to the table. It is placed at the top of the table.</p>
+              <div class="code-block">
+&lt;table&gt;<br>
+&nbsp;&nbsp;&lt;caption&gt;Table Title&lt;/caption&gt;<br>
+&nbsp;&nbsp;&lt;!-- Rows and cells --&gt;<br>
+&lt;/table&gt;
+              </div>
+              
+              <h3>Table Layout</h3>
+              <p><code>colspan</code>: This attribute allows a cell to span across multiple columns.</p>
+              <div class="code-block">
+&lt;td colspan="2"&gt;This cell spans two columns&lt;/td&gt;
+              </div>
+              
+              <p><code>rowspan</code>: This attribute allows a cell to span across multiple rows.</p>
+              <div class="code-block">
+&lt;td rowspan="2"&gt;This cell spans two rows&lt;/td&gt;
+              </div>
+              
+              <p><code>border</code>: The border attribute defines the width of the table's border (deprecated in HTML5, but still used for simple examples).</p>
+              <div class="code-block">
+&lt;table border="1"&gt;<br>
+&nbsp;&nbsp;&lt;!-- Table rows and cells --&gt;<br>
+&lt;/table&gt;
+              </div>
+              
+              <p><code>align</code>: This attribute aligns content within a cell. It can be used to center, left-align, or right-align text or images inside the table.</p>
+              <div class="code-block">
+&lt;td align="center"&gt;Centered text&lt;/td&gt;
+              </div>
+            </section>
+            
+            <!-- Multimedia Section -->
+            <section class="section">
+              <h2>2.2 Multimedia</h2>
+              <p>HTML allows embedding multimedia content such as audio, video, and external content. Here's how to use these elements:</p>
+              
+              <h3>Audio: <code>&lt;audio&gt;</code></h3>
+              <p>The <code>&lt;audio&gt;</code> tag is used to embed sound or music files in your webpage. You can add multiple attributes to control playback, such as controls (for play/pause buttons) and autoplay (for automatic playback).</p>
+              <div class="code-block">
+&lt;audio controls autoplay&gt;<br>
+&nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mp3"&gt;<br>
+&nbsp;&nbsp;Your browser does not support the audio element.<br>
+&lt;/audio&gt;
+              </div>
+              
+              <h3>Video: <code>&lt;video&gt;</code></h3>
+              <p>The <code>&lt;video&gt;</code> tag is used to embed video content. Just like audio, you can add attributes to control playback.</p>
+              <div class="code-block">
+&lt;video width="320" height="240" controls&gt;<br>
+&nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+&nbsp;&nbsp;Your browser does not support the video element.<br>
+&lt;/video&gt;
+              </div>
+              
+              <h3>Embedded Content: <code>&lt;iframe&gt;</code></h3>
+              <p>The <code>&lt;iframe&gt;</code> tag is used to embed external content, such as another webpage, YouTube videos, or maps.</p>
+              <div class="code-block">
+&lt;iframe src="https://www.youtube.com/embed/video_id" width="560" height="315" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+              </div>
+            </section>
+          
+            <!-- HTML5 Semantic Elements Section -->
+            <section class="section">
+              <h2>2.3 HTML5 Semantic Elements</h2>
+              <p>HTML5 introduced a number of semantic elements that provide meaning to the structure of a webpage. These tags improve accessibility and SEO (Search Engine Optimization).</p>
+              
+              <h3>Common HTML5 Semantic Tags</h3>
+              <p><code>&lt;header&gt;</code>: Represents the top section of the page or a section, typically containing navigation or branding.</p>
+              <div class="code-block">
+&lt;header&gt;<br>
+&nbsp;&nbsp;&lt;h1&gt;Welcome to My Website&lt;/h1&gt;<br>
+&lt;/header&gt;
+              </div>
+              
+              <p><code>&lt;footer&gt;</code>: Represents the footer section, typically containing copyright information or contact details.</p>
+              <div class="code-block">
+&lt;footer&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;© 2024 My Website&lt;/p&gt;<br>
+&lt;/footer&gt;
+              </div>
+              
+              <p><code>&lt;nav&gt;</code>: Represents a section of the page that contains navigation links.</p>
+              <div class="code-block">
+&lt;nav&gt;<br>
+&nbsp;&nbsp;&lt;ul&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+&nbsp;&nbsp;&lt;/ul&gt;<br>
+&lt;/nav&gt;
+              </div>
+              
+              <p><code>&lt;main&gt;</code>: Represents the main content of the document. There should be only one <code>&lt;main&gt;</code> tag per page.</p>
+              <div class="code-block">
+&lt;main&gt;<br>
+&nbsp;&nbsp;&lt;h2&gt;Content Section&lt;/h2&gt;<br>
+&lt;/main&gt;
+              </div>
+          
+              <p><code>&lt;section&gt;</code>: Defines a section in the document, such as a blog post, a chapter, or a news article.</p>
+              <div class="code-block">
+&lt;section&gt;<br>
+&nbsp;&nbsp;&lt;h2&gt;Blog Post Title&lt;/h2&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;Content of the blog post...&lt;/p&gt;<br>
+&lt;/section&gt;
+              </div>
+            </section>
+            
+            <!-- HTML5 Forms Section -->
+            <section class="section">
+              <h2>2.4 HTML5 Forms</h2>
+              <p>HTML5 introduces new input types and features for building more advanced forms with better functionality and user experience.</p>
+          
+              <h3>New Input Types</h3>
+              <p><code>&lt;input type="email"&gt;</code>: Ensures the user enters an email address.</p>
+              <div class="code-block">
+&lt;input type="email" name="email" required&gt;
+              </div>
+          
+              <p><code>&lt;input type="tel"&gt;</code>: Used for phone numbers.</p>
+              <div class="code-block">
+&lt;input type="tel" name="phone"&gt;
+              </div>
+          
+              <p><code>&lt;input type="date"&gt;</code>: Allows users to pick a date from a date picker.</p>
+              <div class="code-block">
+&lt;input type="date" name="birthday"&gt;
+              </div>
+          
+              <p><code>&lt;input type="number"&gt;</code>: Ensures the user enters a number.</p>
+              <div class="code-block">
+&lt;input type="number" name="quantity" min="1" max="10"&gt;
+              </div>
+          
+              <p><code>&lt;input type="color"&gt;</code>: Provides a color picker.</p>
+              <div class="code-block">
+&lt;input type="color" name="color"&gt;
+              </div>
+          
+              <h3>Form Validation</h3>
+              <p>HTML5 introduces basic form validation with attributes like required, min, max, and pattern.</p>
+              <div class="code-block">
+&lt;form&gt;<br>
+&nbsp;&nbsp;&lt;input type="text" name="name" required&gt;<br>
+&nbsp;&nbsp;&lt;input type="email" name="email" required&gt;<br>
+&nbsp;&nbsp;&lt;input type="number" name="age" min="18" max="100" required&gt;<br>
+&lt;/form&gt;
+              </div>
+            </section>
+            
+            <!-- Meta Tags and Metadata Section -->
+            <section class="section">
+              <h2>2.5 Meta Tags and Metadata</h2>
+              <p>Meta tags are used to provide metadata about the HTML document, which is not visible to the user but helps browsers and search engines understand and process the page.</p>
+          
+              <h3>Key Meta Tags</h3>
+              <p><code>&lt;meta charset="UTF-8"&gt;</code>: Defines the character encoding used in the document.</p>
+              <div class="code-block">
+&lt;meta charset="UTF-8"&gt;
+              </div>
+          
+              <p><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Ensures the page is responsive on mobile devices.</p>
+              <div class="code-block">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+              </div>
+            </section>
+          </div>
+          
+
+        
+      </div>
+      <footer>
+        <p>Created with ❤️ by <a href="https://www.example.com">Your Name</a>. All Rights Reserved.</p>
+      </footer>
+      
+        
+    
+</body>
+</html>

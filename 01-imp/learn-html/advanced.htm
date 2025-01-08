@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="navlogo">
+            <a href="index.html"><img src="/images/email-icon-html-76.png" alt="logo"></a>
+        </div>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search hear">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Basic HTML</a></li>
+            <li><a href="intermediate.html">Intermediate HTML</a></li>
+            <li><a href="advanced.htm">Advanced HTML</a></li>
+            
+        </ul>          
+    </div>
+
+    <a href="advanced.htm"><div class="arrow"><h1>up</h1></div></a>
+
+    <div id="intro">
+
+        <div class="container">
+            
+            <section class="section">
+              <h1>Advanced HTML Concepts</h1>
+              <p>In this section, we will dive into advanced HTML topics, including how HTML integrates with other web technologies and how to apply best practices for building optimized, accessible, and responsive web pages. The goal is to ensure that anyone can grasp the fundamentals, and experienced developers can use this as a reference to deepen their understanding of modern web development.</p>
+            </section>
+          
+            
+            <section class="section">
+              <h2>Responsive Web Design (RWD)</h2>
+              <p>Responsive Web Design (RWD) ensures that web pages look good and function well on a variety of devices, from desktops to smartphones. This approach makes websites "responsive" to different screen sizes, adjusting the layout, images, and content accordingly.</p>
+          
+              <h3>1. Media Queries</h3>
+              <p>Media queries are a key part of RWD. These are used in CSS to apply styles depending on the device's characteristics, such as screen width. For example, if a screen width is less than 600px (common for smartphones), the font size can be adjusted to improve readability.</p>
+              <div class="code-block">
+    /* CSS Example */<br>
+@media (max-width: 600px) {<br>
+&nbsp;&nbsp;body {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px;<br>
+&nbsp;&nbsp;}<br>
+}
+              </div>
+              <p>This means that when the screen is 600px or less, the body text will shrink to 14px. This is useful for making sure your text isn’t too large or too small for mobile devices.</p>
+          
+              <h3>2. Viewport Meta Tag</h3>
+              <p>The viewport meta tag helps control the layout on mobile browsers. Without it, a mobile device will display the page as if it’s a desktop page, causing text and images to appear too large or too small.</p>
+              <div class="code-block">
+                
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+              </div>
+              <p>This tells the browser to adjust the page's layout to fit the device’s screen width and sets the initial zoom level to 1 (meaning no zoom).</p>
+          
+              <h3>3. Flexible Layouts</h3>
+              <p>Instead of using fixed widths, a flexible layout adjusts based on the available screen space. This can be achieved using fluid grids, flexible images, and responsive typography. These elements scale automatically as the screen size changes.</p>
+              <div class="code-block">
+/* Example of a flexible image */<br>
+img {<br>
+&nbsp;&nbsp;max-width: 100%;<br>
+&nbsp;&nbsp;height: auto;<br>
+}
+              </div>
+            </section>
+          
+            
+            <section class="section">
+              <h2>HTML5 APIs</h2>
+              <p>HTML5 introduced several APIs (Application Programming Interfaces) that allow web developers to create dynamic, interactive websites. These APIs provide advanced capabilities that were previously not possible in HTML alone.</p>
+          
+              <h3>1. Canvas API</h3>
+              <p>The &lt;canvas&gt; element allows developers to draw graphics directly in the browser, such as charts, games, and other visualizations.</p>
+              <div class="code-block">
+&lt;canvas id="myCanvas" width="400" height="400"&gt;&lt;/canvas&gt;<br>
+&lt;script&gt;<br>
+&nbsp;&nbsp;var ctx = document.getElementById("myCanvas").getContext("2d");<br>
+&nbsp;&nbsp;ctx.fillStyle = "red";<br>
+&nbsp;&nbsp;ctx.fillRect(10, 10, 150, 100);<br>
+&lt;/script&gt;
+              </div>
+          
+              <h3>2. Local Storage</h3>
+              <p>HTML5 provides localStorage and sessionStorage to store data directly in the browser. This is particularly useful for saving data across page reloads or for maintaining state in web applications.</p>
+              <div class="code-block">
+// Example of saving data in localStorage<br>
+localStorage.setItem("username", "JohnDoe");<br>
+                <br>
+// Retrieving the data<br>
+var username = localStorage.getItem("username");<br>
+console.log(username); // Outputs "JohnDoe"
+              </div>
+          
+              <h3>3. Geolocation API</h3>
+              <p>The Geolocation API allows a webpage to access the user’s geographic location. This is particularly useful for location-based services.</p>
+              <div class="code-block">
+// Example of using Geolocation API<br>
+navigator.geolocation.getCurrentPosition(function(position) {<br>
+&nbsp;&nbsp;console.log(position.coords.latitude, position.coords.longitude);<br>
+});
+              </div>
+          
+              <h3>4. Web Workers</h3>
+              <p>Web Workers allow background scripts to run without blocking the user interface (UI), making web applications more responsive.</p>
+              <div class="code-block">
+// Example of using a Web Worker<br>
+var worker = new Worker('worker.js');<br>
+worker.postMessage('start');<br>
+worker.onmessage = function(e) {<br>
+&nbsp;&nbsp;console.log('Message from worker: ', e.data);<br>
+};
+              </div>
+            </section>
+          
+            
+            <section class="section">
+              <h2>HTML Accessibility</h2>
+              <p>Accessibility in HTML ensures that people with disabilities, including those using screen readers or keyboard navigation, can access and interact with the content.</p>
+          
+              <h3>1. ARIA (Accessible Rich Internet Applications)</h3>
+              <p>ARIA roles and attributes enhance accessibility by providing additional information to assistive technologies.</p>
+              <div class="code-block">
+<br>
+&lt;div role="button" aria-pressed="false" onclick="alert('Clicked!')"&gt;Click me&lt;/div&gt;
+              </div>
+              
+              <h3>2. Alt Text for Images</h3>
+              <p>Always use the alt attribute for images to describe their content, which is helpful for screen readers.</p>
+              <div class="code-block">
+&lt;img src="logo.png" alt="Company Logo"&gt;
+              </div>
+          
+              <h3>3. Keyboard Navigation</h3>
+              <p>Ensure that users can navigate through the website using only a keyboard. This can be achieved by adding the tabindex attribute to elements.</p>
+              <div class="code-block">
+&lt;input type="text" tabindex="1"&gt;<br>
+&lt;button tabindex="2"&gt;Submit&lt;/button&gt;
+              </div>
+            </section>
+          
+            <section class="section">
+              <h2>HTML Optimization</h2>
+              <p>Optimizing your HTML code improves page load times, SEO, and overall performance.</p>
+          
+              <h3>1. SEO Best Practices</h3>
+              <p>Properly structure your HTML to improve Search Engine Optimization (SEO). For example, use appropriate heading tags (&lt;h1&gt; to &lt;h6&gt;) for titles and subtitles. Ensure all images have descriptive alt attributes for better indexing by search engines.</p>
+              <div class="code-block">
+&lt;h1&gt;Welcome to Our Website&lt;/h1&gt;<br>
+&lt;h2&gt;About Us&lt;/h2&gt;<br>
+&lt;img src="team.jpg" alt="Our team working together"&gt;
+              </div>
+          
+              <h3>2. Performance Optimization</h3>
+              <p>Optimize the performance of your HTML pages:</p>
+              <p>Lazy Loading: Load images only when they are about to enter the viewport, reducing initial page load time.</p>
+              <div class="code-block">
+&lt;img src="image.jpg" loading="lazy" alt="Lazy loaded image"&gt;
+              </div>
+              <p>Async and Defer for Scripts: Load JavaScript asynchronously using the async or defer attributes to prevent scripts from blocking page rendering.</p>
+              <div class="code-block">
+&lt;script src="script.js" async&gt;&lt;/script&gt;
+              </div>
+          
+              <h3>3. Minification and Compression</h3>
+              <p>Minify HTML, CSS, and JavaScript to remove unnecessary spaces and comments, and use gzip compression to reduce file size.</p>
+            </section>
+          
+
+            <section class="section">
+              <h2>HTML and JavaScript Integration</h2>
+              <p>HTML and JavaScript work together through the Document Object Model (DOM) to manipulate web content dynamically.</p>
+          
+              <h3>1. DOM Manipulation</h3>
+              <p>JavaScript can interact with HTML elements by accessing the DOM. This allows developers to modify content, styles, and structure.</p>
+              <div class="code-block">
+// Example: Changing the content dynamically using JavaScript<br>
+document.getElementById("demo").innerHTML = "Hello, World!";
+              </div>
+          
+              <h3>2. Event Handling</h3>
+              <p>JavaScript can respond to user interactions such as clicks, mouse movements, or keyboard events. You can bind event handlers to HTML elements.</p>
+              <div class="code-block">
+&lt;button onclick="alert('Button clicked!')"&gt;Click me&lt;/button&gt;
+              </div>
+            </section>
+          
+            <section class="section">
+              <h2>Progressive Web Apps (PWAs)</h2>
+              <p>A Progressive Web App (PWA) is a type of web application that works offline and can be installed on a user's device, offering an app-like experience.</p>
+          
+              <h3>1. Service Workers</h3>
+              <p>Service workers enable PWAs to work offline and sync data in the background. They act as intermediaries between the browser and the network, allowing caching and background processes.</p>
+              <div class="code-block">
+// Example of registering a service worker<br>
+if ('serviceWorker' in navigator) {<br>
+&nbsp;&nbsp;navigator.serviceWorker.register('/service-worker.js')<br>
+&nbsp;&nbsp;.&then(function(registration) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log('Service Worker registered:', registration);<br>
+&nbsp;&nbsp;})<br>
+&nbsp;&nbsp;.catch(function(error) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;console.log('Service Worker registration failed:', error);<br>
+&nbsp;&nbsp;});<br>
+}
+              </div>
+          
+              <h3>2. App Manifest</h3>
+              <p>The app manifest defines the metadata for a PWA, including the app's name, icon, and theme color.</p>
+              <div class="code-block">
+&lt;link rel="manifest" href="/manifest.json"&gt;<br>
+              </div>
+            </section>
+          </div>
+          
+          
+          
+    </div>
+    <footer>
+      <p>Created with ❤️ by <a href="https://www.example.com">Your Name</a>. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>
